@@ -3,13 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AppNoMetamask from './AppNoMetamask';
+var metamask = window.ethereum && window.ethereum.isMetaMask;
+
+var app = metamask ? <App /> : <AppNoMetamask />;
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    { app }
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

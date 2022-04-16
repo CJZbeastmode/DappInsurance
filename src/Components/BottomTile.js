@@ -11,8 +11,6 @@ function BottomTile(props)
                 <Button style={{ marginLeft: "10px" }} onClick={ () => { props.setPopUp(1); props.setTrigger(true) }}>Ticket</Button>
             </div>
             <div style={{ height: "30px" }}></div>
-            
-            
         </div>
     );
 }

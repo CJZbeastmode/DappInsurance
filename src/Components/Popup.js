@@ -16,19 +16,22 @@ const Popup = props => {
   // 4 -> insure
   switch (props.popupState)
   {
-    case 0: content = <Claim color={props.color}/>; break;
-    case 1: content = <Ticket color={props.color}/>; break;
+    case 0: content = <Claim color={props.color} account={props.account} setTrigger={props.setTrigger}/>; break;
+    case 1: content = <Ticket color={props.color} setTrigger={props.setTrigger}/>; break;
     case 2: content = <Info color={props.color}/>; break;
-    case 3: content = <Details color={props.color}/>; break;
-    case 4: content = <Insure color={props.color}/>; break;
-    case 5: content = <ChangeData color={props.color}/>; break;
+    case 3: content = <Details color={props.color} account={props.account}/>; break;
+    case 4: content = <Insure color={props.color} setTrigger={props.setTrigger} account={props.account}/>; break;
+    case 5: content = <ChangeData color={props.color} setTrigger={props.setTrigger} account={props.account}/>; break;
   }
 
   return (props.trigger) ? (
     <div className="popup">
       <div className="popup-inner">
+        <div onClick={ () => props.setTrigger(false)} style={{ cursor: "pointer", marginTop: "-40px" }}>
+          <p style={{ fontSize: "30px", color: props.color } }>X</p>
+        </div>
         { content }
-        <button onClick={ () => props.setTrigger(false) }>Close</button>
+        <div style={{ height: "80px" }}></div>
       </div>
     </div>
   ) : "";

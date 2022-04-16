@@ -1,19 +1,11 @@
-import Button from "../Button";
-import { useEthers } from "@usedapp/core";
-
-function TopTileInvalid(props)
+function TopTileInvalid()
 {
-    const { activateBrowserWallet }  = useEthers();
+    var text = window.ethereum && window.ethereum.isMetaMask 
+    ? <p style={{ fontSize: "45px" }}>Connect Your Wallet to Proceed!</p>
+    :  <p style={{ fontSize: "45px" }}>Please Install Metamask!</p>;
     return (
         <div style={{ backgroundColor: "white", width: "80%", textAlign: "center", borderRadius: "40px" }}>
-            <p style={{ fontSize: "45px" }}>Connect Your Wallet to Proceed!</p>
-            <div style={{ height: "30px" }}></div>
-            <div>
-                <Button onClick={ () => { activateBrowserWallet(); props.triggerTopTile(); }}>Connect</Button>
-            </div>
-            <div style={{ height: "30px" }}></div>
-            
-            
+            {text}
         </div>
     );
 }
