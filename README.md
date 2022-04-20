@@ -2,7 +2,7 @@
 !!!: THIS APP IS CURRENTLY ONLY AVAILABLE ON KOVAN NETWORK FOR TESTING PURPOSES SOLELY!
 
 This repository contains the react app "DappInsurance", which is a decentralized insurance system that enables
-users to purchase insurance for their Ethereum wallet (address).
+users to purchase insurance for their Ethereum wallet (address).<br />
 ![alt text](/README_img/homepage.png)
 
 
@@ -15,7 +15,7 @@ git clone https://github.com/CJZbeastmode/DappInsurance
 
 
 ## Usage
-1, redirecting into the downloaded directory.
+1, redirecting into the downloaded directory.<br />
 2, start Node.js server
 ```
 npm start
