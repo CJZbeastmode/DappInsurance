@@ -38,7 +38,7 @@ Download Metamask Add-On for Microsoft Edge: https://microsoftedge.microsoft.com
 
 ## Configuration
 If you want to start your own server, you need to configure the contract address, admin address and contract ABI.<br />
-Change the variables in ROOT_DIRECTORY/src/build/abi.js
+Change the variables in /src/build/abi.js
 
 
 
