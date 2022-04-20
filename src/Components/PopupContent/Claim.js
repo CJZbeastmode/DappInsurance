@@ -1,5 +1,6 @@
 import Button from "../Button";
 import { appendClaim, getDetails } from "../../database";
+import hash from "../../hash";
 
 function Claim(props) {
     console.log(getDetails(props.account));
@@ -33,9 +34,10 @@ function submit(props)
     var email = document.getElementById('email').value;
     var reason = document.getElementById('reason').value;
     var description = document.getElementById('description').value;
-    var sf = document.getElementById('sf').value;
+    var sf = hash(document.getElementById('sf').value);
+    console.log(sf);
     var exists = getDetails(account).length !== 0;
-    console.log(getDetails(account)[5]);
+    console.log(getDetails(account).get('secretPhrase'));
 
     if (account === '' || email === '' || !email.includes('@', 0) || reason === '(Please Select a Reason)' || description === '')
     {
@@ -46,7 +48,7 @@ function submit(props)
         if (!exists) alert("Failure: Your wallet is not insured!");
         else
         {
-            if (sf !== getDetails(account)[5]) alert("Failure: Secret Phrases do not match!");
+            if (sf !== getDetails(account).get('secretPhrase')) alert("Failure: Secret Phrases do not match!");
             else
             {
                 appendClaim(account, email, reason, description);

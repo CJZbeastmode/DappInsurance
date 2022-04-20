@@ -1,11 +1,11 @@
 import Button from "../Button";
 import { useState } from "react";
-import getQuote from "../../helpful_scripts";
-import { purchaseInsurance, getDetails, addTransaction, getToday } from "../../database";
+import getQuote from "../../getQuote";
+import { purchaseInsurance, addTransaction } from "../../database";
 import Web3 from "web3";
 import { contractAddress, abi } from "../../build/abi";
 import detectEthereumProvider from "@metamask/detect-provider";
-
+import hash from "../../hash";
 
 function Insure(props)
 {
@@ -59,7 +59,7 @@ function InsureQuote(props)
                 var emi = props.data[0];
                 var ema = props.data[1];
                 var period = props.data[2];
-                var sf = props.data[3];
+                var sf = hash(props.data[3]);
                 var quote = props.data[4];
                 var quoteWei = Web3.utils.toWei(String(quote));
                 console.log(quoteWei);
@@ -83,6 +83,7 @@ function InsureQuote(props)
                 alert("Success!");
                 props.setData(null);
                 props.setTrigger(false);
+                window.location.reload();
             }}>Insure Now</Button>
         </div>
     );

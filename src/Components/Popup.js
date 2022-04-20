@@ -6,7 +6,6 @@ import Details from "./PopupContent/Details"
 import Info from "./PopupContent/Info"
 import ChangeData from "./PopupContent/ChangeData";
 
-
 const Popup = props => {
   var content;
   // 0 -> claim
@@ -36,6 +35,5 @@ const Popup = props => {
     </div>
   ) : "";
 };
-
 
 export default Popup;

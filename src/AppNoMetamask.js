@@ -1,4 +1,5 @@
 import TopTileInvalid from "./Components/TopTile/TopTileInvalid";
+
 function AppNoMetamask()
 {
     return (
@@ -12,4 +13,5 @@ function AppNoMetamask()
         </div>
       );
 }
+
 export default AppNoMetamask;

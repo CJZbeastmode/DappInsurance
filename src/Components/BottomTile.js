@@ -15,8 +15,6 @@ function BottomTile(props)
     );
 }
 
-export default BottomTile;
-
 const Button = styled.button`
     font-size: 18px;
     height: 50px;
@@ -40,3 +38,5 @@ const Button = styled.button`
         opacity: 0.7;
     }
 `;
+
+export default BottomTile;

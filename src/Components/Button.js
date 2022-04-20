@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 const Button = styled.button`
     font-size: 18px;
     height: 50px;
@@ -22,4 +23,5 @@ const Button = styled.button`
         opacity: 0.7;
     }
 `;
+
 export default Button;

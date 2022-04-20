@@ -8,7 +8,7 @@ function TopTileValid(props)
     setTimeout(() => { setRefresh(1); }, 1000);
 
     const details = getDetails(props.account);
-    const exists = details.length !== 0;
+    const exists = details.size !== 0;
 
     var loading = (
       <div style={{ backgroundColor: "white", width: "80%", textAlign: "center", borderRadius: "40px" }}>
@@ -17,7 +17,7 @@ function TopTileValid(props)
     );
     var notLoading = (
     <div style={{ backgroundColor: "white", width: "80%", textAlign: "center", borderRadius: "40px" }}>      
-    { exists ? (<p style={{ fontSize: "45px" }}>Your wallet is insured until {details[0].substring(0, 4)}.{details[0].substring(4, 6)}.{details[0].substring(6, 8)}!</p>)
+    { exists ? (<p style={{ fontSize: "45px" }}>Your wallet is insured until {details.get('dueDate').substring(0, 4)}.{details.get('dueDate').substring(4, 6)}.{details.get('dueDate').substring(6, 8)}!</p>)
       : (<p style={{ fontSize: "45px" }}>Your wallet hasn't yet been insured!</p>)
     }
     <div style={{ height: "30px" }}></div>

@@ -5,7 +5,6 @@ function Topbar(props) {
     var button = isConnected
     ? <Button onClick={ () => props.setAccount(null) }>Disconnect</Button>
     : <Button onClick={ () => props.connect() }>Connect</Button>;
-    var dashboardButton = props.account === '0x3221a67f25507812a16664f191f030b247d17773' ? <Button>Dashboard</Button> : '';
 
     return (
         <div style={{ height: "100px", display: "flex", flexDirection: "row" }}>
@@ -14,7 +13,6 @@ function Topbar(props) {
             </div>
             <div style={{ width: "50%", textAlign: "right" }}>
                 { button }
-                { dashboardButton }
              </div>
         </div>   
     );
@@ -44,7 +42,4 @@ const Button = styled.button`
     }
 `;
 
-
-
-export default Topbar;
-  
+export default Topbar;  
