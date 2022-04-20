@@ -89,39 +89,3 @@ function App() {
 }
 
 export default App;
-
-/*
-
-1, Insurance
-Due Date
-Wallet_Address
-Estimated Max Amount
-Estimated Monthly Inflow
-Secret Phrase
-
-2, Transactions
-Wallet_Address
-Paid_Date
-Paid_Fee
-*/
-
-/*
-3, Claim
-Claim_ID
-Insurance_ID
-Type
-Description
-
-Forgotten Phrase
-Physical Devices Hacked
-Wallet Hacked
-Phished
-Others: _____
-
-4, Ticket
-Ticket_ID
-Title
-Category
-Content
-Email
-*/
