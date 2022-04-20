@@ -38,7 +38,7 @@ Download Metamask Add-On for Microsoft Edge: https://microsoftedge.microsoft.com
 
 ## Configuration
 If you want to start your own server, you need to configure the contract address, admin address and contract ABI.<br />
-Change the variables in ROOT_DIRECTORY/src/build/abi.js
+Change the variables in /src/build/abi.js
 
 
 
@@ -63,4 +63,5 @@ Ethereum Wallet Address: 0x3221A67F25507812A16664f191F030b247d17773
 
 
 ## Links
-GUN Database: https://gun.eco/
+GUN Database: https://gun.eco/ <br />
+Backend Contract: https://github.com/CJZbeastmode/DappInsurance-Contract
